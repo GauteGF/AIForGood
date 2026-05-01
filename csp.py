@@ -15,7 +15,7 @@ nx.draw(G, pos, with_labels=True, node_color="#7D6B34FF", node_size=1200)
 plt.show()
 
 crops = ["wheat", "potato", "carrot", "corn", "barley"]
-previous_crop = {"p1": "wheat", "p2": "potato", "p3": "onion", "p4": "corn", "p5": "barley"}
+previous_crop = {"p1": "wheat", "p2": "potato", "p3": "carrot", "p4": "corn", "p5": "barley"}
 
 problem = Problem()
 
