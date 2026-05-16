@@ -61,7 +61,7 @@ Each Pareto pick reports three values:
 - **Expected profit** (the primary optimisation target). For each plot:
   `expected_profit_per_plot = (revenue * yield_factor - cost) * size`
   where `yield_factor ∈ [0.4, 1.0]` is derived from how well the assigned crop matches the plot's soil and water. Cost is always paid in full, so a really bad fit can push expected profit negative on a plot. Summed across plots, this is what the farmer can actually expect to make.
-- **Baseline profit** (reference number, not optimised). Same formula with `yield_factor = 1.0` everywhere. This is the optimistic upper bound — what you'd make if every crop hit its full baseline yield. The `realised X%` figure is `expected / baseline`.
+- **Baseline profit** (reference number, not optimised). Same formula with `yield_factor = 1.0` everywhere. This is the optimistic upper bound: what you'd make if every crop hit its full baseline yield. The `realised X%` figure is `expected / baseline`.
 - **Reliability** (the second optimisation target). Soil/water fit signal, scaled by plot size. Independent of revenue/cost: useful as a sustainability / monoculture-risk proxy on top of expected profit. Reported as a raw score, a percentage of the scenario's range, and a band (`poor` < 50%, `fair` 50–70%, `good` 70–85%, `excellent` ≥ 85%). Per hectare it ranges from `-5` (wrong soil + 4-unit water gap) to `+4` (matching soil + perfect water).
 
 The Pareto front uses expected profit and reliability. The tradeoff is "earn more now in conditions the crop tolerates" vs "earn less now but maintain good growing conditions across the farm."

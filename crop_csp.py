@@ -251,9 +251,9 @@ class CropCSP:
         )
         title = f"scenario: {self.scenario.name}"
         if len(options) == 1:
-            title += "  —  single Pareto-optimal solution (no tradeoff to make)"
+            title += "   |   single Pareto-optimal solution (no tradeoff to make)"
         elif len(options) == 2:
-            title += "  —  only two distinct Pareto-optimal solutions (no balanced middle)"
+            title += "   |   only two distinct Pareto-optimal solutions (no balanced middle)"
         fig.suptitle(title, fontsize=11)
         plt.tight_layout(rect=(0, 0.06, 1, 0.92))
         plt.show()
@@ -306,7 +306,7 @@ class CropCSP:
 
         ax.set_xlabel("expected profit (kr)")
         ax.set_ylabel("reliability")
-        ax.set_title(f"objective space — scenario: {self.scenario.name}")
+        ax.set_title(f"objective space: {self.scenario.name}")
         ax.grid(True, alpha=0.3)
         ax.legend(loc="best")
         plt.tight_layout()
